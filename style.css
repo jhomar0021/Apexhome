@@ -1,0 +1,1080 @@
+/* --- Global Variables & Resets --- */
+:root {
+  --primary: #1e293b;
+  --accent: #d97706;
+  --text: #334155;
+  --light: #f8fafc;
+  --white: #ffffff;
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  color: var(--text);
+  line-height: 1.6;
+  background-color: var(--white);
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-padding {
+  padding: 80px 0;
+}
+
+.bg-light {
+  background-color: var(--light);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.sub-heading {
+  color: var(--accent);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: var(--primary);
+}
+
+/* --- Layout Grids --- */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  align-items: center;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* --- Buttons --- */
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--accent);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background-color: #b45309;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--white);
+  border: 2px solid var(--white);
+}
+
+.btn-secondary:hover {
+  background-color: var(--white);
+  color: var(--primary);
+}
+
+.btn-primary-outline {
+  background-color: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+.btn-primary-outline:hover {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.btn-accent {
+  background-color: var(--primary);
+  color: var(--white);
+  border: none;
+}
+
+.btn-accent:hover {
+  background-color: #0f172a;
+}
+
+/* --- Navbar --- */
+.navbar {
+  background-color: var(--white);
+  padding: 20px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.logo span {
+  color: var(--accent);
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--accent);
+}
+
+.btn-nav {
+  background-color: var(--primary);
+  color: var(--white) !important;
+  padding: 8px 20px;
+  border-radius: 4px;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--primary);
+  cursor: pointer;
+}
+
+/* --- Hero Section --- */
+.hero {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80")
+      no-repeat center center/cover;
+  height: 80vh; /* Adjust height based on your layout preferance */
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 20px;
+}
+
+.reviews-slider {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  padding: 20px 0 50px 0; /* Increased bottom padding to prevent dots overlapping text on small screens */
+  height: auto; /* Allows the container to grow vertically if text wraps */
+}
+
+.reviews-track {
+  display: flex;
+  align-items: flex-start; /* CRITICAL: Aligns cards to the top so taller cards don't stretch the others awkwardly */
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  width: 100%;
+}
+
+.review-card {
+  width: 100%; /* Forces explicit calculation boundaries */
+  min-width: 100%;
+  flex-shrink: 0;
+  box-sizing: border-box; /* Ensures padding stays INSIDE the 100% width calculation */
+  padding: 30px 60px; /* Added extra left/right breathing room for quotes */
+  text-align: center;
+}
+
+/* Pagination Dots Styling Layout */
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #cbd5e1; /* Inactive grey dot color */
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.dot.active {
+  background-color: var(--accent, #d97706); /* Highlights active dot color */
+  transform: scale(1.2);
+  width: 24px; /* Gives an elegant elongated pill shape to active item */
+  border-radius: 6px;
+}
+
+/* --- About Intro --- */
+
+.about-banner {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url("https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1920&h=400&q=80")
+      no-repeat center center/cover;
+  padding: 60px 0; /* Adjust spacing to match your design layout */
+  text-align: center;
+  color: #ffffff;
+}
+
+.img-placeholder {
+  background-color: #cbd5e1;
+  height: 400px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  color: var(--primary);
+}
+
+.about-text-box h2 {
+  margin-bottom: 20px;
+}
+
+.about-text-box p {
+  margin-bottom: 25px;
+}
+
+/* --- Roadmap/Process --- */
+.roadmap {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  position: relative;
+}
+
+.roadmap-step {
+  flex: 1;
+  background-color: var(--white);
+  padding: 30px 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.step-icon {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(217, 119, 6, 0.1);
+  color: var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin: 0 auto 20px auto;
+}
+
+.roadmap-step h3 {
+  margin-bottom: 10px;
+  color: var(--primary);
+}
+
+/* --- Lead Magnet --- */
+.magnet-wrapper {
+  background: var(--accent);
+  padding: 60px;
+  border-radius: 12px;
+  color: var(--white);
+  text-align: center;
+}
+
+.magnet-content h2 {
+  color: var(--white);
+  margin-bottom: 15px;
+}
+
+.magnet-content p {
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+.magnet-form {
+  display: flex;
+  justify-content: center;
+  max-width: 600px;
+  margin: 0 auto;
+  gap: 10px;
+}
+
+.magnet-form input {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.success-msg {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+/* --- Design Section --- */
+.design-card {
+  background-color: var(--white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+}
+
+.card-img {
+  height: 220px;
+  background-color: #cbd5e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: var(--primary);
+}
+
+.card-body {
+  padding: 25px;
+}
+
+.card-body h3 {
+  margin-bottom: 15px;
+  color: var(--primary);
+}
+
+.specs {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+}
+
+.specs i {
+  color: var(--accent);
+}
+
+.btn-card {
+  display: block;
+  text-align: center;
+  background-color: var(--light);
+  color: var(--primary);
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.btn-card:hover {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.center-cta {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* --- Reviews Section --- */
+.reviews-slider {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.review-card {
+  background-color: var(--white);
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.stars {
+  color: #f59e0b;
+  margin-bottom: 15px;
+}
+
+.review-card p {
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.review-card h4 {
+  color: var(--primary);
+}
+
+/* --- Footer --- */
+.footer {
+  background-color: var(--primary);
+  color: #94a3b8;
+  text-align: center;
+  padding: 30px 0;
+  font-size: 0.9rem;
+}
+
+/* --- Responsive Media Queries --- */
+@media (max-width: 992px) {
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .roadmap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--white);
+    flex-direction: column;
+    padding: 30px;
+    gap: 20px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    display: none; /* Toggled via JS */
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .grid-2,
+  .grid-3,
+  .reviews-slider,
+  .roadmap {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .magnet-form {
+    flex-direction: column;
+  }
+
+  .magnet-wrapper {
+    padding: 30px 20px;
+  }
+}
+/* --- Inner Page Specific Layouts --- */
+
+/* Inner Page Banner */
+.inner-banner {
+  padding: 60px 0;
+  color: var(--white);
+  text-align: center;
+}
+
+.inner-banner-temp {
+  background:
+    linear-gradient(rgba(30, 41, 59, 0.9), rgba(30, 41, 59, 0.9)),
+    url("https://via.placeholder.com/1920x400") no-repeat center center/cover;
+}
+
+.designs-banner {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1920&h=450&q=80")
+      no-repeat center center/cover;
+}
+
+.inner-banner h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+.inner-banner p {
+  font-size: 1.1rem;
+  opacity: 0.8;
+}
+
+/* History Stats Layout */
+.stats-badge-grid {
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 25px;
+}
+
+.stat-item h3 {
+  font-size: 2.2rem;
+  color: var(--accent);
+  margin-bottom: 5px;
+}
+
+.stat-item p {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.history-img-box .img-placeholder {
+  height: 450px;
+}
+
+/* Core Values Section */
+.value-card {
+  background-color: var(--white);
+  padding: 40px 30px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+  border: 1px solid #e2e8f0;
+  transition: var(--transition);
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.05);
+}
+
+.value-icon {
+  font-size: 2.5rem;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
+.value-card h3 {
+  margin-bottom: 12px;
+  color: var(--primary);
+}
+
+/* Team Section CSS Extension */
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.team-card {
+  background-color: var(--white);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.01);
+}
+
+.team-img {
+  height: 260px;
+  background-color: #cbd5e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  color: var(--primary);
+}
+
+.team-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.team-info h3 {
+  font-size: 1.2rem;
+  color: var(--primary);
+  margin-bottom: 4px;
+}
+
+.team-info .role {
+  font-size: 0.9rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* --- Responsive Adaptations for About Page --- */
+@media (max-width: 992px) {
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+  .stats-badge-grid {
+    justify-content: space-around;
+    gap: 15px;
+  }
+  .stat-item h3 {
+    font-size: 1.8rem;
+  }
+}
+
+/* --- Designs Portfolio View CSS --- */
+
+.filter-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 50px;
+  background-color: var(--light);
+  padding: 15px 30px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.filter-label {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.filter-btn {
+  background-color: var(--white);
+  border: 1px solid #cbd5e1;
+  color: var(--text);
+  padding: 8px 18px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background-color: var(--accent);
+  color: var(--white);
+  border-color: var(--accent);
+}
+
+/* Enhancing standard design cards with structural descriptions */
+.design-card .card-description {
+  font-size: 0.95rem;
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+.btn-card i {
+  font-size: 0.85rem;
+  margin-left: 5px;
+  transition: var(--transition);
+}
+
+.btn-card:hover i {
+  transform: translateX(4px);
+}
+
+/* Animations for seamless script sorting hidden classes */
+.design-card.fade-out {
+  display: none;
+}
+
+/* --- Responsive Adjustments for Filter Elements --- */
+@media (max-width: 768px) {
+  .filter-container {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  .filter-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  .filter-btn {
+    width: 100%;
+  }
+}
+/* --- Single Design Detail Page Styling --- */
+
+.breadcrumb-bar {
+  padding: 15px 0;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 0.9rem;
+}
+
+.breadcrumb-bar a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.breadcrumb-bar a:hover {
+  color: var(--accent);
+}
+
+.breadcrumb-bar span {
+  color: #94a3b8;
+}
+
+/* Gallery Interactivity Blocks */
+.gallery-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.main-display-view {
+  height: 400px;
+  background-color: #cbd5e1;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  color: var(--primary);
+  position: relative;
+}
+
+.view-caption {
+  position: absolute;
+  bottom: 15px;
+  background-color: rgba(30, 41, 59, 0.85);
+  color: var(--white);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.gallery-thumbnails {
+  display: flex;
+  gap: 15px;
+}
+
+.thumb-btn {
+  flex: 1;
+  height: 80px;
+  background-color: var(--light);
+  border: 2px solid transparent;
+  border-radius: 6px;
+  font-size: 1.8rem;
+  color: var(--primary);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.thumb-btn:hover,
+.thumb-btn.active {
+  border-color: var(--accent);
+  background-color: var(--white);
+  color: var(--accent);
+}
+
+/* Specs Details Setup */
+.lead-text {
+  font-size: 1.15rem;
+  margin: 15px 0 25px 0;
+  color: #475569;
+}
+
+.specs-pill-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 35px;
+}
+
+.pill-item {
+  background-color: var(--light);
+  border: 1px solid #e2e8f0;
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-size: 0.95rem;
+}
+
+.pill-item i {
+  color: var(--accent);
+  margin-right: 6px;
+}
+
+.architectural-notes h3 {
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+
+.architectural-notes ul {
+  list-style: none;
+}
+
+.architectural-notes li {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.text-accent {
+  color: var(--accent);
+  margin-top: 4px;
+}
+
+/* Booking Form Elements */
+.booking-text blockquote {
+  margin-top: 30px;
+  padding-left: 20px;
+  border-left: 4px solid var(--accent);
+  font-style: italic;
+  color: #475569;
+}
+
+.booking-form-box {
+  background-color: var(--white);
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+}
+
+.booking-form-box h3 {
+  margin-bottom: 20px;
+  color: var(--primary);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  color: var(--primary);
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.btn-block {
+  width: 100%;
+  text-align: center;
+  border: none;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+  .main-display-view {
+    height: 280px;
+  }
+  .booking-form-box {
+    padding: 25px 15px;
+  }
+}
+/* --- Contact Page Specific Layout Style Structure --- */
+
+.contact-intro-text {
+  font-size: 1.1rem;
+  margin: 15px 0 35px 0;
+  color: #475569;
+}
+
+.contact-details-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.contact-detail-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+  color: var(--accent);
+  background-color: rgba(217, 119, 6, 0.1);
+  padding: 12px;
+  border-radius: 8px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-detail-item h3 {
+  font-size: 1.1rem;
+  color: var(--primary);
+  margin-bottom: 2px;
+}
+
+.contact-detail-item p {
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+/* Map Display Placement Wrapper */
+.map-container {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+}
+
+.map-placeholder {
+  height: 250px;
+  background-color: #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  gap: 10px;
+}
+
+.map-placeholder i {
+  font-size: 3rem;
+  color: var(--primary);
+}
+
+/* Form Structural Improvements */
+.contact-form-wrapper .form-card {
+  background-color: var(--white);
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+}
+
+.contact-form-wrapper h3 {
+  font-size: 1.6rem;
+  color: var(--primary);
+  margin-bottom: 5px;
+}
+
+.contact-form-wrapper p {
+  color: #64748b;
+  margin-bottom: 25px;
+  font-size: 0.95rem;
+}
+
+/* Generic Form Input overrides including Selector and Textarea markup mapping */
+.form-select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--text);
+  background-color: var(--white);
+}
+
+.form-select:focus,
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(219, 119, 6, 0.15);
+}
+
+/* Responsive updates for the Contact view grid alignment mapping */
+@media (max-width: 768px) {
+  .contact-form-wrapper .form-card {
+    padding: 25px 15px;
+  }
+}
+@media (max-width: 600px) {
+  .review-card {
+    padding: 20px 20px; /* Reduces horizontal padding so text has more room side-to-side */
+  }
+
+  .review-card p {
+    font-size: 0.95rem;
+    max-width: 80vw; /* Slightly scales down the text size for tight mobile layouts */
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+
+  .slider-dots {
+    bottom: 5px; /* Pulls the navigation dots slightly lower out of the text zone */
+  }
+}
+.contact-banner {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&h=450&q=80")
+      no-repeat center center/cover;
+  padding: 80px 0; /* Creates an expansive structural height */
+  text-align: center;
+  color: #ffffff;
+}

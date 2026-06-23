@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Frontier Barn | Apex Horizon Homes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Apex<span>Homes</span></a>
+            <button class="menu-toggle" id="mobile-menu" aria-label="Toggle navigation"><i
+                    class="fa-solid fa-bars"></i></button>
+            <nav class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="designs.html" class="nav-link active">Designs</a>
+                <a href="contact.html" class="nav-link btn-nav">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="breadcrumb-bar bg-light">
+        <div class="container">
+            <p><a href="index.html">Home</a> &gt; <a href="designs.html">Designs</a> &gt; <span>The Frontier Barn</span>
+            </p>
+        </div>
+    </div>
+
+    <section class="design-detail section-padding">
+        <div class="container grid-2">
+            <div class="gallery-wrapper">
+                <div class="main-display-view" id="gallery-main">
+                    <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80"
+                        alt="The Frontier Barn Exterior"
+                        style="width:100%; height:100%; object-fit:cover; border-radius:8px;">
+                    <p class="view-caption">Exterior Architectural Elevation</p>
+                </div>
+                <div class="gallery-thumbnails">
+                    <button class="thumb-btn active"
+                        data-img="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80"
+                        data-caption="Exterior Architectural Elevation">
+                        <i class="fa-solid fa-warehouse"></i>
+                    </button>
+                    <button class="thumb-btn"
+                        data-img="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80"
+                        data-caption="Symmetric Layout Blueprint">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </button>
+                    <button class="thumb-btn"
+                        data-img="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80"
+                        data-caption="Raked Ceiling Open Lounge">
+                        <i class="fa-solid fa-couch"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="design-specs-panel">
+                <span class="sub-heading">Modern Industrial Series</span>
+                <h2>The Frontier Barn</h2>
+                <p class="lead-text">A striking modern industrial architectural design featuring exposed framing, steel
+                    elements, and high raked ceilings.</p>
+                <div class="specs-pill-grid">
+                    <div class="pill-item"><i class="fa-solid fa-bed"></i> <strong>4</strong> Bedrooms</div>
+                    <div class="pill-item"><i class="fa-solid fa-bath"></i> <strong>3</strong> Bathrooms</div>
+                    <div class="pill-item"><i class="fa-solid fa-car"></i> <strong>3</strong> Car Garage</div>
+                    <div class="pill-item"><i class="fa-solid fa-ruler-combined"></i> <strong>295 m²</strong> Total Area
+                    </div>
+                    <div class="pill-item"><i class="fa-solid fa-arrows-left-right"></i> <strong>15m+</strong> Min Block
+                        Width</div>
+                </div>
+                <div class="architectural-notes">
+                    <h3>Design Highlights</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-check text-accent"></i> Soaring cathedral-style roof ceilings
+                            providing exceptional structural air volume.</li>
+                        <li><i class="fa-solid fa-check text-accent"></i> Striking dark cladding exterior surfaces
+                            offset beautifully by warm wood highlights.</li>
+                        <li><i class="fa-solid fa-check text-accent"></i> Large triple car workshop zone perfectly
+                            planned for storing boats, hobbies, or tools.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="design-booking section-padding bg-light">
+        <div class="container grid-2">
+            <div class="booking-text">
+                <h2>Love This Industrial Look?</h2>
+                <p>Download our complete construction material breakdown for the Frontier line package today.</p>
+            </div>
+            <div class="booking-form-box">
+                <h3>Request Design Catalog & Specs</h3>
+                <form id="design-request-form">
+                    <div class="form-group"><label>Full Name</label><input type="text" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group"><label>Phone Number</label><input type="tel" required
+                            placeholder="0400 000 000"></div>
+                    <div class="form-group"><label>Email Address</label><input type="email" required
+                            placeholder="john@example.com"></div>
+                    <button type="submit" class="btn btn-primary btn-block">Speak to a Consultant</button>
+                </form>
+                <div id="booking-success" class="success-msg hidden"><i class="fa-solid fa-circle-check"></i> Thank you!
+                    A building consultant will contact you within 24 business hours.</div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Apex Homes. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Home Designs | Apex Horizon Homes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Apex<span>Homes</span></a>
+            <button class="menu-toggle" id="mobile-menu" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <nav class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="designs.html" class="nav-link active">Designs</a>
+                <a href="contact.html" class="nav-link btn-nav">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="inner-banner designs-banner">
+        <div class="container">
+            <h1>Our Architectural Designs</h1>
+            <p>Browse our collection of award-winning, customizable home layouts.</p>
+        </div>
+    </section>
+
+    <section class="designs-portfolio section-padding">
+        <div class="container">
+
+            <div class="filter-container">
+                <span class="filter-label"><i class="fa-solid fa-sliders"></i> Filter By Size:</span>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">Show All</button>
+                    <button class="filter-btn" data-filter="3-bed">3 Bedrooms</button>
+                    <button class="filter-btn" data-filter="4-bed">4 Bedrooms</button>
+                    <button class="filter-btn" data-filter="5-bed">5+ Bedrooms</button>
+                </div>
+            </div>
+
+            <div class="grid-3" id="designs-grid">
+
+                <div class="design-card" data-category="4-bed">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80"
+                            alt="The Aurora Vista - Modern Luxury Home"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="card-body">
+                        <h3>The Aurora Vista</h3>
+                        <ul class="specs">
+                            <li><i class="fa-solid fa-bed"></i> 4 Beds</li>
+                            <li><i class="fa-solid fa-bath"></i> 2.5 Baths</li>
+                            <li><i class="fa-solid fa-car"></i> 2 Car</li>
+                        </ul>
+                        <p class="card-description">Perfect for growing families, featuring an open-plan kitchen and an
+                            isolated
+                            upstairs retreat.</p>
+                        <a href="single-design-aurora.html" class="btn btn-card">More Information <i
+                                class="fa-solid fa-arrow-right-long"></i></a>
+                    </div>
+                </div>
+
+                <div class="design-card" data-category="3-bed">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80"
+                            alt="The Haven Crest - Compact Urban Living"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="card-body">
+                        <h3>The Haven Crest</h3>
+                        <ul class="specs">
+                            <li><i class="fa-solid fa-bed"></i> 3 Beds</li>
+                            <li><i class="fa-solid fa-bath"></i> 2 Baths</li>
+                            <li><i class="fa-solid fa-car"></i> 1 Car</li>
+                        </ul>
+                        <p class="card-description">A compact, ultra-modern layout optimized for narrower urban blocks
+                            without
+                            losing luxury value.</p>
+                        <a href="single-design-haven.html" class="btn btn-card">More Information <i
+                                class="fa-solid fa-arrow-right-long"></i></a>
+                    </div>
+                </div>
+
+                <div class="design-card" data-category="5-bed">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80"
+                            alt="The Meridian Suite - Multi-Generational Estate"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="card-body">
+                        <h3>The Meridian Suite</h3>
+                        <ul class="specs">
+                            <li><i class="fa-solid fa-bed"></i> 5 Beds</li>
+                            <li><i class="fa-solid fa-bath"></i> 4 Baths</li>
+                            <li><i class="fa-solid fa-car"></i> 2 Car</li>
+                        </ul>
+                        <p class="card-description">Our flagship multi-generational estate build complete with private
+                            guest suites
+                            and a home cinema.</p>
+                        <a href="single-design-meridian.html" class="btn btn-card">More Information <i
+                                class="fa-solid fa-arrow-right-long"></i></a>
+                    </div>
+                </div>
+
+                <div class="design-card" data-category="3-bed">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80"
+                            alt="The Oasis Sanctuary - Indoor Outdoor Living"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="card-body">
+                        <h3>The Oasis Sanctuary</h3>
+                        <ul class="specs">
+                            <li><i class="fa-solid fa-bed"></i> 3 Beds</li>
+                            <li><i class="fa-solid fa-bath"></i> 2 Baths</li>
+                            <li><i class="fa-solid fa-car"></i> 2 Car</li>
+                        </ul>
+                        <p class="card-description">Emphasizing indoor-outdoor integration with panoramic glass sliding
+                            doors and
+                            central courtyard views.</p>
+                        <a href="single-design-oasis.html" class="btn btn-card">More Information <i
+                                class="fa-solid fa-arrow-right-long"></i></a>
+                    </div>
+                </div>
+
+                <div class="design-card" data-category="4-bed">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80"
+                            alt="The Frontier Barn - Modern Industrial Home"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="card-body">
+                        <h3>The Frontier Barn</h3>
+                        <ul class="specs">
+                            <li><i class="fa-solid fa-bed"></i> 4 Beds</li>
+                            <li><i class="fa-solid fa-bath"></i> 3 Baths</li>
+                            <li><i class="fa-solid fa-car"></i> 3 Car</li>
+                        </ul>
+                        <p class="card-description">A striking modern industrial architectural design featuring exposed
+                            steel beams
+                            and raked ceilings.</p>
+                        <a href="single-design-frontier.html" class="btn btn-card">More Information <i
+                                class="fa-solid fa-arrow-right-long"></i></a>
+                    </div>
+                </div>
+
+                <div class="design-card" data-category="5-bed">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=80"
+                            alt="The Skyline Crest - Sloped Block Architecture"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="card-body">
+                        <h3>The Skyline Crest</h3>
+                        <ul class="specs">
+                            <li><i class="fa-solid fa-bed"></i> 5 Beds</li>
+                            <li><i class="fa-solid fa-bath"></i> 4.5 Baths</li>
+                            <li><i class="fa-solid fa-car"></i> 3 Car</li>
+                        </ul>
+                        <p class="card-description">Engineered for sloped plots, this multi-level home boasts elevated
+                            balconies
+                            capturing sweeping views.</p>
+                        <a href="single-design-skyline.html" class="btn btn-card">More Information <i
+                                class="fa-solid fa-arrow-right-long"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Apex Homes. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

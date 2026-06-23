@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Aurora Vista | Apex Horizon Homes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Apex<span>Homes</span></a>
+            <button class="menu-toggle" id="mobile-menu" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <nav class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="designs.html" class="nav-link active">Designs</a>
+                <a href="contact.html" class="nav-link btn-nav">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="breadcrumb-bar bg-light">
+        <div class="container">
+            <p><a href="index.html">Home</a> &gt; <a href="designs.html">Designs</a> &gt; <span>The Aurora Vista</span>
+            </p>
+        </div>
+    </div>
+
+    <section class="design-detail section-padding">
+        <div class="container grid-2">
+
+            <div class="gallery-wrapper">
+                <div class="main-display-view" id="gallery-main">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80"
+                        alt="The Aurora Vista Exterior"
+                        style="width:100%; height:100%; object-fit:cover; border-radius:8px;">
+                    <p class="view-caption">Exterior Render View</p>
+                </div>
+                <div class="gallery-thumbnails">
+                    <button class="thumb-btn active"
+                        data-img="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80"
+                        data-caption="Exterior Render View">
+                        <i class="fa-solid fa-tree-city"></i>
+                    </button>
+                    <button class="thumb-btn"
+                        data-img="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80"
+                        data-caption="Ground Floor Layout Plan">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </button>
+                    <button class="thumb-btn"
+                        data-img="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80"
+                        data-caption="Living Room Concept Space">
+                        <i class="fa-solid fa-couch"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="design-specs-panel">
+                <span class="sub-heading">Premium Collection</span>
+                <h2>The Aurora Vista</h2>
+                <p class="lead-text">A masterful balance of community entertainment spaces and private sanctuary
+                    architecture optimized for modern families.</p>
+
+                <div class="specs-pill-grid">
+                    <div class="pill-item"><i class="fa-solid fa-bed"></i> <strong>4</strong> Bedrooms</div>
+                    <div class="pill-item"><i class="fa-solid fa-bath"></i> <strong>2.5</strong> Bathrooms</div>
+                    <div class="pill-item"><i class="fa-solid fa-car"></i> <strong>2</strong> Car Garage</div>
+                    <div class="pill-item"><i class="fa-solid fa-ruler-combined"></i> <strong>315 m²</strong> Total Area
+                    </div>
+                    <div class="pill-item"><i class="fa-solid fa-arrows-left-right"></i> <strong>12.5m+</strong> Min
+                        Block Width</div>
+                </div>
+
+                <div class="architectural-notes">
+                    <h3>Design Highlights</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-check text-accent"></i> Expansive open-plan kitchen featuring an
+                            integrated walk-in butler's pantry.</li>
+                        <li><i class="fa-solid fa-check text-accent"></i> Isolated master suite level boasting a private
+                            balcony and premium double-vanity ensuite.</li>
+                        <li><i class="fa-solid fa-check text-accent"></i> Dedicated secondary casual living zone/home
+                            theater complex downstairs.</li>
+                        <li><i class="fa-solid fa-check text-accent"></i> Eco-conscious architectural framing engineered
+                            for natural cross-ventilation flow.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="design-booking section-padding bg-light">
+        <div class="container grid-2">
+            <div class="booking-text">
+                <h2>Love This Design Layout?</h2>
+                <p>Get in touch with our design consultants to see how we can adapt *The Aurora Vista* framework to
+                    match your building plot, orientation settings, and lifestyle prerequisites.</p>
+                <blockquote>
+                    <i class="fa-solid fa-quote-left"></i> "We customized the Aurora package slightly to add a home
+                    workspace extension. The transition was completely smooth!" <br><strong>- The Henderson
+                        Family</strong>
+                </blockquote>
+            </div>
+            <div class="booking-form-box">
+                <h3>Request Design Catalog & Specs</h3>
+                <form id="design-request-form">
+                    <div class="form-group">
+                        <label for="client-name">Full Name</label>
+                        <input type="text" id="client-name" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="client-phone">Phone Number</label>
+                        <input type="tel" id="client-phone" placeholder="0400 000 000" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="client-email">Email Address</label>
+                        <input type="email" id="client-email" placeholder="john@example.com" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Speak to a Consultant</button>
+                </form>
+                <div id="booking-success" class="success-msg hidden">
+                    <i class="fa-solid fa-circle-check"></i> Thank you! A custom building consultant will call you
+                    within 24 business hours.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Apex Homes. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
