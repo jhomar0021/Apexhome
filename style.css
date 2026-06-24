@@ -1078,3 +1078,170 @@ h2 {
   text-align: center;
   color: #ffffff;
 }
+/* --- Global Footer Styles --- */
+.site-footer {
+  background-color: #0f172a; /* Sophisticated deep slate dark background */
+  color: #94a3b8; /* Balanced light grey readability color */
+  padding: 70px 0 0 0;
+  font-family: inherit;
+  border-top: 4px solid #d97706; /* Elite gold/amber branding accent accent strip */
+}
+
+.site-footer .container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Grid Alignment Setup */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2.2fr 1fr 1fr 1.3fr; /* Custom asymmetric balancing */
+  gap: 40px;
+  padding-bottom: 50px;
+}
+
+.footer-col h3 {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+/* Elegant tiny accent block beneath headings */
+.footer-col h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 30px;
+  height: 2px;
+  background-color: #d97706;
+}
+
+/* Column 1 Specifics */
+.footer-logo {
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  letter-spacing: -0.5px;
+}
+.footer-logo span {
+  color: #d97706;
+}
+.brand-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.footer-socials {
+  display: flex;
+  gap: 12px;
+}
+.footer-socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: #1e293b;
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.footer-socials a:hover {
+  background-color: #d97706;
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+/* Structural Links Lists */
+.footer-links {
+  list-style: none;
+}
+.footer-links li {
+  margin-bottom: 12px;
+}
+.footer-links a {
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+.footer-links a:hover {
+  color: #ffffff;
+  padding-left: 4px; /* Tiny responsive push interaction */
+}
+
+/* Contact Details Column */
+.footer-contact-info {
+  list-style: none;
+}
+.footer-contact-info li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+.footer-contact-info i {
+  color: #d97706;
+  margin-top: 4px;
+}
+.footer-contact-info a {
+  color: #94a3b8;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.footer-contact-info a:hover {
+  color: #ffffff;
+}
+
+/* Legal Bottom Sub-bar Row */
+.footer-bottom {
+  background-color: #020617; /* Darker bottom block strip split */
+  padding: 25px 0;
+  border-top: 1px solid #1e293b;
+  font-size: 0.85rem;
+}
+.bottom-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.legal-links a {
+  color: #64748b;
+  text-decoration: none;
+  margin-left: 20px;
+  transition: color 0.2s ease;
+}
+.legal-links a:hover {
+  color: #ffffff;
+}
+
+/* Responsive Structural Breakpoint */
+@media (max-width: 992px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr; /* Drops down nicely to balanced 2x2 grid */
+    gap: 40px;
+  }
+}
+@media (max-width: 550px) {
+  .footer-grid {
+    grid-template-columns: 1fr; /* Stacks completely vertically on mobile */
+    gap: 30px;
+  }
+  .bottom-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+  .legal-links a {
+    margin: 0 10px;
+  }
+}
